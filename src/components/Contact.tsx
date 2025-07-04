@@ -18,6 +18,12 @@ function Contact() {
 
   const form = useRef();
 
+  /*TODO:
+    - togliere il form per mandare email
+    - creare bottone con "Drop me an email"
+  */
+  
+
   const sendEmail = (e: any) => {
     e.preventDefault();
 
@@ -54,7 +60,8 @@ function Contact() {
       <div className="items-container">
         <div className="contact_wrapper">
           <h1>Contact Me</h1>
-          <p>Got a project waiting to be realized? Let's collaborate and make it happen!</p>
+          <p>I'm always looking for opportunities to learn new things and chanllenge my self.
+            Do not esitate to contact me: drop me an email!</p>
           <Box
             ref={form}
             component="form"

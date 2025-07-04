@@ -1,7 +1,7 @@
 import React from "react";
 //import '@fortawesome/free-regular-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBriefcase } from '@fortawesome/free-solid-svg-icons';
+import { faBriefcase, faSchool } from '@fortawesome/free-solid-svg-icons';
 import { VerticalTimeline, VerticalTimelineElement }  from 'react-vertical-timeline-component';
 import 'react-vertical-timeline-component/style.min.css';
 import '../assets/styles/Timeline.scss'
@@ -10,56 +10,80 @@ function Timeline() {
   return (
     <div id="history">
       <div className="items-container">
-        <h1>Career History</h1>
+        <h1>Work Experience and Education</h1>
         <VerticalTimeline>
           <VerticalTimelineElement
             className="vertical-timeline-element--work"
             contentStyle={{ background: 'white', color: 'rgb(39, 40, 34)' }}
             contentArrowStyle={{ borderRight: '7px solid  white' }}
-            date="2022 - present"
+            date="2022 - Present"
             iconStyle={{ background: '#5000ca', color: 'rgb(39, 40, 34)' }}
             icon={<FontAwesomeIcon icon={faBriefcase} />}
           >
-            <h3 className="vertical-timeline-element-title">Technology Consultant</h3>
-            <h4 className="vertical-timeline-element-subtitle">Dallas, TX</h4>
+            <h3 className="vertical-timeline-element-title">Data Scientist - SpazioDati</h3>
+            <h4 className="vertical-timeline-element-subtitle">Trento, Italy</h4>
             <p>
-              Full-stack Web Development, GenAI/LLM, Project Management, Business Development
+              Design and implement machine learning models and data pipelines in
+              Python, focusing on company and financial data. Projects span
+              sustainability profiling, keyword extraction, energy consumption
+              estimation, and wealth prediction. Recently, I have led LLM-based
+              initiatives for credit risk management, developing chatbots and AI
+              assistants to enhance financial decision-making.
             </p>
           </VerticalTimelineElement>
           <VerticalTimelineElement
             className="vertical-timeline-element--work"
-            date="2020 - 2022"
+            date="2022"
             iconStyle={{ background: '#5000ca', color: 'rgb(39, 40, 34)' }}
             icon={<FontAwesomeIcon icon={faBriefcase} />}
           >
-            <h3 className="vertical-timeline-element-title">Full Stack Engineer</h3>
-            <h4 className="vertical-timeline-element-subtitle">Laie, HI</h4>
+            <h3 className="vertical-timeline-element-title">Data Scientist - BIP x-Tech</h3>
+            <h4 className="vertical-timeline-element-subtitle">Milan, Italy</h4>
             <p>
-              Frontend Development, Backend Development, User Experience, Team Leading
+              Development of machine learning algorithms to help clients improve their
+              business while leveraging information mined from their data.
             </p>
           </VerticalTimelineElement>
           <VerticalTimelineElement
             className="vertical-timeline-element--work"
-            date="2021 - 2021"
+            date="2019"
             iconStyle={{ background: '#5000ca', color: 'rgb(39, 40, 34)' }}
             icon={<FontAwesomeIcon icon={faBriefcase} />}
           >
-            <h3 className="vertical-timeline-element-title">Staff Engineer Intern</h3>
-            <h4 className="vertical-timeline-element-subtitle">Laie, HI</h4>
+            <h3 className="vertical-timeline-element-title">Data Scientist Internship - Araneum Technologies</h3>
+            <h4 className="vertical-timeline-element-subtitle">Zurich, Switzerland</h4>
             <p>
-              Full-stack Development, API Development, User Experience
+              Review of natural language processing methods and defined
+              implementation plan for project on bank transaction data to determine
+              connections between bank customers.
             </p>
           </VerticalTimelineElement>
           <VerticalTimelineElement
-            className="vertical-timeline-element--work"
-            date="2020 - 2020"
+            className="vertical-timeline-element--school"
+            date="2017 - 2021"
             iconStyle={{ background: '#5000ca', color: 'rgb(39, 40, 34)' }}
-            icon={<FontAwesomeIcon icon={faBriefcase} />}
+            icon={<FontAwesomeIcon icon={faSchool} />}
           >
-            <h3 className="vertical-timeline-element-title">Data Analyst Intern</h3>
-            <h4 className="vertical-timeline-element-subtitle">Tokyo, Japan</h4>
+            <h3 className="vertical-timeline-element-title">Master in Data Science - ETH</h3>
+            <h4 className="vertical-timeline-element-subtitle">Zurich, Switzerland</h4>
             <p>
-              Automation, Data Governance, Statistical Analysis
+              Minor: machine learning applications to biomedicine
+              Final thesis: “Missing Data Imputation in Hospital Administrative Claims Data for Predicting Early Hospital Readmissions”, 
+              Supervisors: Julia Vogt, Thomas Sutter.
+            </p>
+          </VerticalTimelineElement>
+          <VerticalTimelineElement
+            className="vertical-timeline-element--school"
+            date="2014 - 2017"
+            iconStyle={{ background: '#5000ca', color: 'rgb(39, 40, 34)' }}
+            icon={<FontAwesomeIcon icon={faSchool} />}
+          >
+            <h3 className="vertical-timeline-element-title">Bachelor in Statistics - Double Degree</h3>
+            <h4 className="vertical-timeline-element-subtitle">Univerity of Bologna, Bologna, Italy</h4>
+            <h4 className="vertical-timeline-element-subtitle">Glasgow Univeristy, Glasgow, Scotland</h4>
+            <p>
+              Final thesis: "Statistical Inference in Big Viral Antigenicity Data", Supervisors: Dirk Husmeier, Vinny Davies
+              Grade: 110 cum Laude (University of Bologna), First Class with Honors (University of Glasgow)
             </p>
           </VerticalTimelineElement>
         </VerticalTimeline>

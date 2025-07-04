@@ -1,8 +1,8 @@
-.dark-mode .about-section {
+.dark-mode .intro-section {
     background-color: rgba(0, 0, 0, 0.2);
 }
 
-.about-section {
+.intro-section {
     display: flex;
     gap: 30px;
     justify-content: flex-start;
@@ -17,7 +17,7 @@
     background-position: center;
 }
 
-.about-section .content {
+.intro-section .content {
     text-align: left;
     z-index: 2;
 
@@ -49,7 +49,7 @@
     }
 }
 
-.about-section .image-wrapper {
+.intro-section .image-wrapper {
     z-index: 2;
     img {
         width: 150px;
@@ -104,12 +104,12 @@
     }
 
     @media (max-width:768px) {
-        .about-section h1 {
+        .intro-section h1 {
             font-size: 4em !important;
             text-align: left;
         }
 
-        .about-section p {
+        .intro-section p {
             text-align: left;
         }
 
@@ -133,21 +133,21 @@
             }
         }
 
-        .about-section {
+        .intro-section {
             padding-top: 150px;
             display: block;
             padding-left: 0px;
             padding-right: 0px;
         }
 
-        .about-section .content {
+        .intro-section .content {
             width: 90%;
             padding-left: 5%;
             padding-right: 5%;
             padding-bottom: 5%;
         }
 
-        .about-section .image-wrapper {
+        .intro-section .image-wrapper {
             padding-left: 5%;
             width: 100%;
         }
