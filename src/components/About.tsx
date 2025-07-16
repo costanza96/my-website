@@ -56,7 +56,7 @@ function About() {
                     </a>
                 </p>
             </div>
-            <div className="about-slideshow-panel">
+            {/* <div className="about-slideshow-panel">
                 <Slider {...settings}>
                     {images.map((src, idx) => (
                         <div key={idx}>
@@ -64,7 +64,7 @@ function About() {
                         </div>
                     ))}
                 </Slider>
-            </div>
+            </div> */}
         </div>
     );
 }
