@@ -32,7 +32,6 @@ function About() {
         autoplaySpeed: 3000,
         adaptiveHeight: true,
     };
-    console.log(images)
     return (
         <div className="container" id="about">
             <div className="about-text-panel">

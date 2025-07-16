@@ -2,14 +2,23 @@
   max-width: 800px;
   margin: 0 auto 2rem auto;
   text-align: left;
+  padding: 0 1.2rem;
 }
+
 
 .about-slideshow-panel {
   min-height: 400px;
-  //background: #222;
-  // border: 2px solid red;
   max-width: 800px;
   margin: 0 auto;
+  padding: 0 1.2rem;
+}
+
+// Responsive: reduce padding on larger screens if needed
+@media (min-width: 600px) {
+  .about-text-panel,
+  .about-slideshow-panel {
+    padding: 0; // Remove padding for larger screens
+  }
 }
 
 .slick-slider,

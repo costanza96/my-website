@@ -74,35 +74,35 @@ function Navigation({ parentToChild, modeChange }: any) {
   };
 
   const drawer = (
-  <Box className="navigation-bar-responsive" onClick={handleDrawerToggle} sx={{ textAlign: 'center' }}>
-    <p className="mobile-menu-top"><ListIcon />Menu</p>
-    <Divider />
-    <List>
-      {navItems.map((item) => (
-        <ListItem key={item[0]} disablePadding>
-          {item[1] === 'resume' ? (
-            <ListItemButton
-              className="resume-link"
-              onClick={(e) => {
-                e.stopPropagation();
-                handleResumeDownload();
-              }}
-            >
-              <span className="resume-link-content">
-                <span className="resume-link-text">{item[0]}</span>
-                <DownloadIcon className="resume-download-icon" />
-              </span>
-            </ListItemButton>
-          ) : (
-            <ListItemButton className="nav-link" onClick={() => scrollToSection(item[1])}>
-              <ListItemText primary={item[0]} />
-            </ListItemButton>
-          )}
-        </ListItem>
-      ))}
-    </List>
-  </Box>
-);
+    <Box className="navigation-bar-responsive" onClick={handleDrawerToggle} sx={{ textAlign: 'center' }}>
+      <p className="mobile-menu-top"><ListIcon />Menu</p>
+      <Divider />
+      <List>
+        {navItems.map((item) => (
+          <ListItem key={item[0]} disablePadding>
+            {item[1] === 'resume' ? (
+              <ListItemButton
+                className="resume-link"
+                onClick={(e) => {
+                  e.stopPropagation();
+                  handleResumeDownload();
+                }}
+              >
+                <span className="resume-link-content">
+                  <span className="resume-link-text">{item[0]}</span>
+                  <DownloadIcon className="resume-download-icon" />
+                </span>
+              </ListItemButton>
+            ) : (
+              <ListItemButton className="nav-link" onClick={() => scrollToSection(item[1])}>
+                <ListItemText primary={item[0]} />
+              </ListItemButton>
+            )}
+          </ListItem>
+        ))}
+      </List>
+    </Box>
+  );
 
   return (
     <Box sx={{ display: 'flex' }}>
@@ -119,9 +119,9 @@ function Navigation({ parentToChild, modeChange }: any) {
             <MenuIcon />
           </IconButton>
           {mode === 'dark' ? (
-            <LightModeIcon onClick={() => modeChange()}/>
+            <LightModeIcon onClick={() => modeChange()} />
           ) : (
-            <DarkModeIcon onClick={() => modeChange()}/>
+            <DarkModeIcon onClick={() => modeChange()} />
           )}
           <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
             {navItems.map((item) =>
@@ -138,7 +138,10 @@ function Navigation({ parentToChild, modeChange }: any) {
                       handleResumeDownload();
                     }}
                   >
-                    <span className="resume-link-text">{item[0]}</span>
+                    <span className="resume-link-content">
+                      <span className="resume-link-text">{item[0]}</span>
+                      <DownloadIcon className="resume-download-icon" />
+                    </span>
                   </Button>
                 </Box>
               ) : (
