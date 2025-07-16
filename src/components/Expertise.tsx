@@ -30,7 +30,7 @@ const labelsSecond = [
     "Kubernetes",
     "Kubeflow",
     "Argo Workflows",
-    "Ci/CD",
+    "CI/CD",
     "MLflow",
     "AWS",
 ];
