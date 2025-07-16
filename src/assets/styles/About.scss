@@ -1,0 +1,39 @@
+.about-text-panel {
+  max-width: 800px;
+  margin: 0 auto 2rem auto;
+  text-align: left;
+}
+
+.about-slideshow-panel {
+  min-height: 400px;
+  //background: #222;
+  // border: 2px solid red;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.slick-slider,
+.slick-list {
+  width: 100% !important;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.slick-slide {
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+  // width: 100% !important;
+  height: 400px !important;
+}
+
+.about-slide-img {
+  // border: 2px solid lime;
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+  max-height: 400px;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+}

@@ -17,7 +17,7 @@ function Timeline() {
             contentStyle={{ background: 'white', color: 'rgb(39, 40, 34)' }}
             contentArrowStyle={{ borderRight: '7px solid  white' }}
             date="2022 - Present"
-            iconStyle={{ background: '#5000ca', color: 'rgb(39, 40, 34)' }}
+            iconStyle={{ background: '#569fd3', color: 'rgb(39, 40, 34)' }}
             icon={<FontAwesomeIcon icon={faBriefcase} />}
           >
             <h3 className="vertical-timeline-element-title">Data Scientist - <a href="https://www.spaziodati.eu/" target="_blank" rel="noopener noreferrer">SpazioDati</a></h3>
@@ -34,7 +34,7 @@ function Timeline() {
           <VerticalTimelineElement
             className="vertical-timeline-element--work"
             date="2022"
-            iconStyle={{ background: '#5000ca', color: 'rgb(39, 40, 34)' }}
+            iconStyle={{ background: '#569fd3', color: 'rgb(39, 40, 34)' }}
             icon={<FontAwesomeIcon icon={faBriefcase} />}
           >
             <h3 className="vertical-timeline-element-title">Data Scientist - <a href="https://www.bip-group.com/en-uk/who-we-are/practices/x-tech/" target="_blank" rel="noopener noreferrer">BIP x-Tech</a></h3>
@@ -47,7 +47,7 @@ function Timeline() {
           <VerticalTimelineElement
             className="vertical-timeline-element--work"
             date="2019"
-            iconStyle={{ background: '#5000ca', color: 'rgb(39, 40, 34)' }}
+            iconStyle={{ background: '#569fd3', color: 'rgb(39, 40, 34)' }}
             icon={<FontAwesomeIcon icon={faBriefcase} />}
           >
             <h3 className="vertical-timeline-element-title">Data Scientist Internship - Araneum Technologies</h3>
@@ -61,7 +61,7 @@ function Timeline() {
           <VerticalTimelineElement
             className="vertical-timeline-element--school"
             date="2017 - 2021"
-            iconStyle={{ background: '#5000ca', color: 'rgb(39, 40, 34)' }}
+            iconStyle={{ background: '#569fd3', color: 'rgb(39, 40, 34)' }}
             icon={<FontAwesomeIcon icon={faSchool} />}
           >
             <h3 className="vertical-timeline-element-title">Master in Data Science - ETH</h3>
@@ -75,7 +75,7 @@ function Timeline() {
           <VerticalTimelineElement
             className="vertical-timeline-element--school"
             date="2014 - 2017"
-            iconStyle={{ background: '#5000ca', color: 'rgb(39, 40, 34)' }}
+            iconStyle={{ background: '#569fd3', color: 'rgb(39, 40, 34)' }}
             icon={<FontAwesomeIcon icon={faSchool} />}
           >
             <h3 className="vertical-timeline-element-title">Bachelor in Statistics - Double Degree</h3>

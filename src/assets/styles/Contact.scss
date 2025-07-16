@@ -4,23 +4,28 @@
   margin-right: 5px;
 }
 
-.contact-form {
-  padding-top: 20px;
+.contact-buttons {
+  display: flex;
+  gap: 1rem; /* or try 16px, 24px, etc. */
+  margin-top: 1.5rem;
+  flex-wrap: wrap; // optional: makes buttons wrap on small screens
+}
 
-  button {
-    float: right;
-    background-color: white;
-    color: #050f0b;
-  }
+.contact-buttons .MuiButton-root {
+  background-color: #569fd3;
+  color: #fff;
+  border-radius: 6px;
+  box-shadow: none;
+  text-transform: none;
+  font-weight: 600;
+  font-size: 1rem;
+  padding: 0.6em 1.5em;
+  transition: background 0.2s;
+}
 
-  button:hover {
-    background-color: #5000ca;
-    color: white;
-  }
-
-  fieldset {
-    background-color: white;
-  }
+.contact-buttons .MuiButton-root:hover {
+  background-color: #017ad1;
+  color: #fff;
 }
 
 label {

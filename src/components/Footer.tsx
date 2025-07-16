@@ -4,11 +4,14 @@ import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import '../assets/styles/Footer.scss'
 
 function Footer() {
+  const github_url = process.env.REACT_APP_GITHUB_URL
+  const linkedin_url = process.env.REACT_APP_LINKEDIN_URL
+
   return (
     <footer>
       <div>
-        <a href="https://github.com/costanza96" target="_blank" rel="noreferrer"><GitHubIcon/></a>
-        <a href="https://www.linkedin.com/in/costanza-calzolari/" target="_blank" rel="noreferrer"><LinkedInIcon/></a>
+        <a href={github_url} target="_blank" rel="noreferrer"><GitHubIcon/></a>
+        <a href={linkedin_url} target="_blank" rel="noreferrer"><LinkedInIcon/></a>
       </div>
       <p>A portfolio designed & built by <a href="https://github.com/yujisatojr/react-portfolio-template" target="_blank" rel="noreferrer">Yuji Sato</a> with 💜</p>
     </footer>
