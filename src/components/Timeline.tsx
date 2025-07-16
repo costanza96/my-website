@@ -20,7 +20,7 @@ function Timeline() {
             iconStyle={{ background: '#569fd3', color: 'rgb(39, 40, 34)' }}
             icon={<FontAwesomeIcon icon={faBriefcase} />}
           >
-            <h3 className="vertical-timeline-element-title">Data Scientist - SpazioDati</h3>
+            <h3 className="vertical-timeline-element-title">Data Scientist - <a href="https://www.spaziodati.eu/" target="_blank" rel="noopener noreferrer">SpazioDati</a></h3>
             <h4 className="vertical-timeline-element-subtitle">Trento, Italy</h4>
             <p>
               Design and implement machine learning models and data pipelines in
@@ -37,7 +37,7 @@ function Timeline() {
             iconStyle={{ background: '#569fd3', color: 'rgb(39, 40, 34)' }}
             icon={<FontAwesomeIcon icon={faBriefcase} />}
           >
-            <h3 className="vertical-timeline-element-title">Data Scientist - BIP x-Tech</h3>
+            <h3 className="vertical-timeline-element-title">Data Scientist - <a href="https://www.bip-group.com/en-uk/who-we-are/practices/x-tech/" target="_blank" rel="noopener noreferrer">BIP x-Tech</a></h3>
             <h4 className="vertical-timeline-element-subtitle">Milan, Italy</h4>
             <p>
               Development of machine learning algorithms to help clients improve their

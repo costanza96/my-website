@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
@@ -15,13 +15,15 @@ import ListItemButton from '@mui/material/ListItemButton';
 import ListItemText from '@mui/material/ListItemText';
 import MenuIcon from '@mui/icons-material/Menu';
 import Toolbar from '@mui/material/Toolbar';
+import DownloadIcon from '@mui/icons-material/Download';
+import '../assets/styles/Navigation.scss';
 
 const drawerWidth = 240;
 const navItems = [['About', 'about'], ['Skills', 'expertise'], ['Experience', 'history'], ['Contact', 'contact'], ['Resume', 'resume']]; //['Projects', 'projects'],
 
-function Navigation({parentToChild, modeChange}: any) {
+function Navigation({ parentToChild, modeChange }: any) {
 
-  const {mode} = parentToChild;
+  const { mode } = parentToChild;
 
   const [mobileOpen, setMobileOpen] = useState<boolean>(false);
   const [scrolled, setScrolled] = useState<boolean>(false);
@@ -48,6 +50,10 @@ function Navigation({parentToChild, modeChange}: any) {
 
   const scrollToSection = (section: string) => {
     console.log(section)
+    if (section === 'resume') {
+      handleResumeDownload();
+      return;
+    }
     const expertiseElement = document.getElementById(section);
     if (expertiseElement) {
       expertiseElement.scrollIntoView({ behavior: 'smooth' });
@@ -57,16 +63,41 @@ function Navigation({parentToChild, modeChange}: any) {
     }
   };
 
+  const handleResumeDownload = () => {
+    const pdfUrl = '/Resume.pdf';
+    const link = document.createElement('a');
+    link.href = pdfUrl;
+    link.download = 'resume.pdf';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
+
   const drawer = (
     <Box className="navigation-bar-responsive" onClick={handleDrawerToggle} sx={{ textAlign: 'center' }}>
-      <p className="mobile-menu-top"><ListIcon/>Menu</p>
+      <p className="mobile-menu-top"><ListIcon />Menu</p>
       <Divider />
       <List>
         {navItems.map((item) => (
           <ListItem key={item[0]} disablePadding>
-            <ListItemButton sx={{ textAlign: 'center' }} onClick={() => scrollToSection(item[1])}>
-              <ListItemText primary={item[0]} />
-            </ListItemButton>
+            {item[1] === 'resume' ? (
+              <ListItemButton
+                className="resume-link"
+                onClick={(e) => {
+                  e.stopPropagation();
+                  handleResumeDownload();
+                }}
+              >
+                <span className="resume-link-content">
+                  <span className="resume-link-text">{item[0]}</span>
+                  <DownloadIcon className="resume-download-icon" />
+                </span>
+              </ListItemButton>
+            ) : (
+              <ListItemButton className="nav-link" onClick={() => scrollToSection(item[1])}>
+                <ListItemText primary={item[0]} />
+              </ListItemButton>
+            )}
           </ListItem>
         ))}
       </List>
@@ -88,16 +119,37 @@ function Navigation({parentToChild, modeChange}: any) {
             <MenuIcon />
           </IconButton>
           {mode === 'dark' ? (
-            <LightModeIcon onClick={() => modeChange()}/>
+            <LightModeIcon onClick={() => modeChange()} />
           ) : (
-            <DarkModeIcon onClick={() => modeChange()}/>
+            <DarkModeIcon onClick={() => modeChange()} />
           )}
           <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
-            {navItems.map((item) => (
-              <Button key={item[0]} onClick={() => scrollToSection(item[1])} sx={{ color: '#fff' }}>
-                {item[0]}
-              </Button>
-            ))}
+            {navItems.map((item) =>
+              item[1] === 'resume' ? (
+                <Box
+                  key={item[0]}
+                  component="span"
+                  className="resume-box"
+                >
+                  <Button
+                    className="resume-link"
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      handleResumeDownload();
+                    }}
+                  >
+                    <span className="resume-link-content">
+                      <span className="resume-link-text">{item[0]}</span>
+                      <DownloadIcon className="resume-download-icon" />
+                    </span>
+                  </Button>
+                </Box>
+              ) : (
+                <Button key={item[0]} onClick={() => scrollToSection(item[1])} className="nav-link">
+                  {item[0]}
+                </Button>
+              )
+            )}
           </Box>
         </Toolbar>
       </AppBar>

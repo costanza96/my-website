@@ -23,6 +23,21 @@
     color: rgb(39, 40, 34);
 }
 
+.vertical-timeline-element a {
+    color: #017ad1;
+    text-decoration: underline;
+
+    &:hover,
+    &:focus {
+        color: #569fd3;
+        text-decoration: none;
+    }
+
+    &:visited {
+    color: #569fd3;
+  }
+}
+
 .vertical-timeline-element .vertical-timeline-element-date {
     color: white;
 }

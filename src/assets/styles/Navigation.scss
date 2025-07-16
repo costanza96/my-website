@@ -1,0 +1,33 @@
+.resume-box .MuiButton-root {
+  background-color: #569fd3;
+  color: #fff;
+  border-radius: 6px;
+  box-shadow: none;
+  text-transform: none;
+  font-weight: 600;
+  font-size: 1rem;
+  padding: 0.6em 1.5em;
+  transition: background 0.2s;
+}
+
+
+.resume-box .MuiButton-root:hover {
+  background-color: #017ad1;
+  color: #fff;
+}
+
+.resume-download-icon {
+  font-size: 1.1em;
+  vertical-align: middle;
+}
+
+.nav-link {
+  color: var(--nav-link-color);// Set your preferred text color
+  text-transform: none;
+  font-weight: 500;
+  font-size: 1rem;
+
+  &:hover {
+    color: #569fd3; // Change color on hover
+  }
+}

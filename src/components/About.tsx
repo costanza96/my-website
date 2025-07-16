@@ -32,7 +32,6 @@ function About() {
         autoplaySpeed: 3000,
         adaptiveHeight: true,
     };
-    console.log(images)
     return (
         <div className="container" id="about">
             <div className="about-text-panel">
@@ -56,7 +55,7 @@ function About() {
                     </a>
                 </p>
             </div>
-            <div className="about-slideshow-panel">
+            {/* <div className="about-slideshow-panel">
                 <Slider {...settings}>
                     {images.map((src, idx) => (
                         <div key={idx}>
@@ -64,7 +63,7 @@ function About() {
                         </div>
                     ))}
                 </Slider>
-            </div>
+            </div> */}
         </div>
     );
 }
