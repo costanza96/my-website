@@ -1,7 +1,7 @@
 import React from "react";
+
 import '@fortawesome/free-regular-svg-icons'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faReact, faDocker, faPython } from '@fortawesome/free-brands-svg-icons';
+import { ChartScatter, Cpu, Bot } from 'lucide-react'
 import Chip from '@mui/material/Chip';
 import '../assets/styles/Expertise.scss';
 
@@ -11,8 +11,11 @@ const labelsFirst = [
     "SQL",
     "pandas",
     "dask",
+    "polars",
     "scikit-learn",
+    "statsmodels",
     "matplotlib",
+    "seaborn",
     "plotly",
     "streamlit",
     "Dash",
@@ -21,8 +24,8 @@ const labelsFirst = [
 
 const labelsSecond = [
     "scikit-learn",
-    "statmodels",
     "XGBoost",
+    "LightGBM",
     "PyTorch",
     "Keras",
     "Git",
@@ -30,73 +33,82 @@ const labelsSecond = [
     "Kubernetes",
     "Kubeflow",
     "Argo Workflows",
-    "CI/CD",
     "MLflow",
-    "AWS",
+    "CI/CD",
+    "AWS"
 ];
 
 const labelsThird = [
     "RAG",
-    "chatbot",
-    "OpenAI",
-    "Qwen",
-    "Llama",
-    "Groq",
     "LangChain",
     "LangGraph",
     "LangFuse",
+    "chatbot",
+    "DeepEval",
     "Hugging Face",
+    "OpenAI",
+    "Qwen",
+    "LLaMA",
+    "Groq",
+    "Vector DBs",
+    "Prompt engineering"
 ];
 
 function Expertise() {
     return (
-    <div className="container" id="expertise">
-        <div className="skills-container">
-            <h1>Skills</h1>
-            <div className="skills-grid">
-                <div className="skill">
-                    <FontAwesomeIcon icon={faReact} size="3x"/>
-                    <h3>Data Analysis, manipulation & visualization</h3>
-                    <p>The very start of every Data Science and Machine Learning project begins with a good knolowdge of your data, 
-                        being able to analyse complex and messy dataset is essential to be able to tackle complex problems. 
-                        Through the years have had many experience with such situations.</p>
-                    <div className="flex-chips">
-                        <span className="chip-title">Tech stack:</span>
-                        {labelsFirst.map((label, index) => (
-                            <Chip key={index} className='chip' label={label} />
-                        ))}
+        <div className="container" id="expertise">
+            <div className="skills-container">
+                <h1>Skills</h1>
+                <div className="skills-grid">
+                    <div className="skill">
+                        <ChartScatter size={48} />
+                        <h3>Data Wrangling & Storytellng</h3>
+                        <p>Every successful data science project begins with understanding your data.
+                            Over the years, I’ve built strong intuition working with messy, unstructured, or sparse datasets
+                            transforming them into clean, usable formats and uncovering patterns that matter.
+                            From company profiling to ESG metrics, I use visual and statistical exploration to guide model design and business insight.</p>
+                        <div className="flex-chips">
+                            <span className="chip-title">Tech stack:</span>
+                            {labelsFirst.map((label, index) => (
+                                <Chip key={index} className='chip' label={label} />
+                            ))}
+                        </div>
                     </div>
-                </div>
 
-                <div className="skill">
-                    <FontAwesomeIcon icon={faDocker} size="3x"/>
-                    <h3>ML & MLOps</h3>
-                    <p>Once the you have a grasp the data it's time to start building models.
-                        I have developed stong experience in choosing, building, training and deploying models.
-                        From the very beginning of this process to the last part of being able to get the models up and running for production.
-                    </p>
-                    <div className="flex-chips">
-                        <span className="chip-title">Tech stack:</span>
-                        {labelsSecond.map((label, index) => (
-                            <Chip key={index} className='chip' label={label} />
-                        ))}
+                    <div className="skill">
+                        <Cpu size={48} />
+                        <h3>Machine Leanring & MLOps</h3>
+                        <p>Once the data is ready, I design and implement machine learning models tailored to the problem at hand.
+                            My experience spans supervised and unsupervised learning, time series, and ranking models,
+                            with a focus on financial and operational use cases.
+                            I work across the full lifecycle—from feature engineering to monitoring,
+                            ensuring reproducibility and robust delivery through MLOps pipelines.
+                        </p>
+                        <div className="flex-chips">
+                            <span className="chip-title">Tech stack:</span>
+                            {labelsSecond.map((label, index) => (
+                                <Chip key={index} className='chip' label={label} />
+                            ))}
+                        </div>
                     </div>
-                </div>
 
-                <div className="skill">
-                    <FontAwesomeIcon icon={faPython} size="3x"/>
-                    <h3>GenAI & LLM</h3>
-                    <p>Stay relevant in the market by leveraging the latest AI models in your projects. I have professional experience building enterprise grade GenAI-enabled solutions to empower intelligent decision making.</p>
-                    <div className="flex-chips">
-                        <span className="chip-title">Tech stack:</span>
-                        {labelsThird.map((label, index) => (
-                            <Chip key={index} className='chip' label={label} />
-                        ))}
+                    <div className="skill">
+                        <Bot size={48} />
+                        <h3>LLM Application & GenAI</h3>
+                        <p>I’ve worked on building enterprise-grade tools powered by large language models,
+                            including RAG pipelines and AI assistants for credit risk and investment support.
+                            My work spans tool orchestration, embedding-based retrieval, prompt and context engineering.
+                            I’m especially interested in making GenAI systems explainable, testable, and useful in real-world decision-making.</p>
+                        <div className="flex-chips">
+                            <span className="chip-title">Tech stack:</span>
+                            {labelsThird.map((label, index) => (
+                                <Chip key={index} className='chip' label={label} />
+                            ))}
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
     );
 }
 

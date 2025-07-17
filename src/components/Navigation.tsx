@@ -18,7 +18,7 @@ import Toolbar from '@mui/material/Toolbar';
 import DownloadIcon from '@mui/icons-material/Download';
 import '../assets/styles/Navigation.scss';
 
-export {};
+export { };
 
 declare global {
   interface Window {
@@ -72,24 +72,24 @@ function Navigation({ parentToChild, modeChange }: any) {
   };
 
   const handleResumeDownload = () => {
-  // Track device type
-  const isMobile = window.innerWidth < 768;
-  const deviceType = isMobile ? 'mobile' : 'desktop';
-  // Send event to Plausible (if loaded)
-  if (window.plausible) {
-    window.plausible('Resume Download', {
-      props: { device: deviceType }
-    });
-  }
-  // Trigger download
-  const pdfUrl = '/Resume.pdf';
-  const link = document.createElement('a');
-  link.href = pdfUrl;
-  link.download = 'resume.pdf';
-  document.body.appendChild(link);
-  link.click();
-  document.body.removeChild(link);
-};
+    // Track device type
+    const isMobile = window.innerWidth < 768;
+    const deviceType = isMobile ? 'mobile' : 'desktop';
+    // Send event to Plausible (if loaded)
+    if (window.plausible) {
+      window.plausible('Resume Download', {
+        props: { device: deviceType }
+      });
+    }
+    // Trigger download
+    const pdfUrl = '/Resume.pdf';
+    const link = document.createElement('a');
+    link.href = pdfUrl;
+    link.download = 'resume.pdf';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
 
   const drawer = (
     <Box className="navigation-bar-responsive" onClick={handleDrawerToggle} sx={{ textAlign: 'center' }}>
@@ -108,7 +108,7 @@ function Navigation({ parentToChild, modeChange }: any) {
               >
                 <span className="resume-link-content">
                   <span className="resume-link-text">{item[0]}</span>
-                  <DownloadIcon className="resume-download-icon" />
+                  <DownloadIcon className="resume-download-icon-mobile" />
                 </span>
               </ListItemButton>
             ) : (
@@ -158,12 +158,16 @@ function Navigation({ parentToChild, modeChange }: any) {
                   >
                     <span className="resume-link-content">
                       <span className="resume-link-text">{item[0]}</span>
-                      <DownloadIcon className="resume-download-icon" />
+                      <DownloadIcon className="resume-download-icon-desktop" />
                     </span>
                   </Button>
                 </Box>
               ) : (
-                <Button key={item[0]} onClick={() => scrollToSection(item[1])} className="nav-link">
+                <Button
+                  key={item[0]}
+                  onClick={() => scrollToSection(item[1])}
+                  className={`nav-link ${mode === 'dark' ? 'nav-link-dark' : 'nav-link-light'}`}
+                >
                   {item[0]}
                 </Button>
               )

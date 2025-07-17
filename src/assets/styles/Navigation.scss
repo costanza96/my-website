@@ -16,18 +16,36 @@
   color: #fff;
 }
 
-.resume-download-icon {
+.resume-download-icon-desktop {
+  color: #fff !important;
+  font-size: 1.1em;
+  vertical-align: middle;
+}
+
+.resume-download-icon-mobile {
   font-size: 1.1em;
   vertical-align: middle;
 }
 
 .nav-link {
-  color: var(--nav-link-color);// Set your preferred text color
   text-transform: none;
   font-weight: 500;
   font-size: 1rem;
+  transition: color 0.2s ease;
+}
+
+.nav-link-dark {
+  color: white !important;
 
   &:hover {
-    color: #569fd3; // Change color on hover
+    color: #569fd3;
+  }
+}
+
+.nav-link-light {
+  color: black;
+
+  &:hover {
+    color: #017ad1;
   }
 }

@@ -1,3 +1,15 @@
+import adamello from '../assets/images/adamello.jpeg';
+import adamello1 from '../assets/images/adamello1.jpeg';
+import adamello2 from '../assets/images/adamello2.jpeg';
+import bg1 from '../assets/images/bg1.jpeg';
+import clouds from '../assets/images/clouds.jpeg';
+import colorful from '../assets/images/colorful.jpeg';
+import glacier from '../assets/images/glacier.jpeg';
+import hut from '../assets/images/hut.jpeg';
+import lake from '../assets/images/lake.jpeg';
+import palla_bianca from '../assets/images/palla_bianca.jpeg';
+import tl from '../assets/images/tl.jpeg';
+import tl2 from '../assets/images/tl2.jpeg';
 import React from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
@@ -7,19 +19,19 @@ import '../assets/styles/About.scss';
 
 function About() {
     const images = [
-    require('../assets/images/adamello.jpeg'),
-    require('../assets/images/adamello1.jpeg'),
-    require('../assets/images/adamello2.jpeg'),
-    require('../assets/images/bg1.jpeg'),
-    require('../assets/images/clouds.jpeg'),
-    require('../assets/images/colorful.jpeg'),
-    require('../assets/images/glacier.jpeg'),
-    require('../assets/images/hut.jpeg'),
-    require('../assets/images/lake.jpeg'),
-    require('../assets/images/palla_bianca.jpeg'),
-    require('../assets/images/tl.jpeg'),
-    require('../assets/images/tl2.jpeg'),
-];
+        adamello,
+        adamello1,
+        adamello2,
+        bg1,
+        clouds,
+        colorful,
+        glacier,
+        hut,
+        lake,
+        palla_bianca,
+        tl,
+        tl2,
+    ];
 
     const settings = {
         dots: true,
@@ -37,25 +49,24 @@ function About() {
             <div className="about-text-panel">
                 <h1>About me</h1>
                 <p>
-                    Hello, My name is Costanza, I’m a data scientist focused on turning complex data into actionable insights.
-                    I build machine learning models and pipelines in Python, with projects spanning company profiling,
-                    sustainability analysis, and energy consumption estimation. Recently, I’ve specialized in financial data,
-                    working on wealth estimation and LLM-based tools for credit risk and investment support.
+                    Hi, I’m Costanza — a data scientist passionate about turning complex data into meaningful, actionable insights.
+                    I design and implement machine learning models and data pipelines in Python, with experience spanning company profiling,
+                    sustainability metrics, and energy consumption analytics. Lately, my focus has shifted toward financial applications:
+                    I’ve worked on personal wealth estimation and developed LLM-powered tools to support credit risk assessment and investment decisions.
                 </p>
                 <p>
-                    Outside work, you’ll find me in the mountains either on my mountain bike or with a heavy backpack
-                    or with my backcountry skiis on, chasing thrilling heights and taking mediocre pictures of breathtaking landscapes.
-                    I'm also an insatiable reader,&nbsp;
+                    When I’m not working, you’ll probably find me in the mountains riding my mountain bike, ski touring across backcountry trails, or
+                    hiking with a heavy pack in search of new views (and taking mediocre photos of spectacular places). I’m also a voracious reader,&nbsp;
                     <a
                         href="https://www.notion.so/My-Library-169977198510804297a0e794825e66e6?source=copy_link"
                         target="_blank"
                         rel="noreferrer"
                     >
-                        check out my latest readings!
+                        check out what I’ve been reading lately!
                     </a>
                 </p>
             </div>
-            {/* <div className="about-slideshow-panel">
+            <div className="about-slideshow-panel">
                 <Slider {...settings}>
                     {images.map((src, idx) => (
                         <div key={idx}>
@@ -63,7 +74,7 @@ function About() {
                         </div>
                     ))}
                 </Slider>
-            </div> */}
+            </div>
         </div>
     );
 }

@@ -13,14 +13,6 @@
   padding: 0 1.2rem;
 }
 
-// Responsive: reduce padding on larger screens if needed
-@media (min-width: 600px) {
-  .about-text-panel,
-  .about-slideshow-panel {
-    padding: 0; // Remove padding for larger screens
-  }
-}
-
 .slick-slider,
 .slick-list {
   width: 100% !important;
@@ -32,12 +24,15 @@
   display: flex !important;
   justify-content: center;
   align-items: center;
-  // width: 100% !important;
+  width: 100% !important;
   height: 400px !important;
 }
 
+.slick-track {
+  display: flex !important;
+}
+
 .about-slide-img {
-  // border: 2px solid lime;
   display: block;
   margin: 0 auto;
   max-width: 100%;
@@ -45,4 +40,19 @@
   width: auto;
   height: auto;
   object-fit: contain;
+}
+
+.about-text-panel a {
+  color: #017ad1;
+  text-decoration: underline;
+
+  &:hover,
+    &:focus {
+        color: #569fd3;
+        text-decoration: none;
+    }
+
+    &:visited {
+    color: #569fd3;
+  }
 }
