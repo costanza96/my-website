@@ -55,6 +55,15 @@ function About() {
                     I’ve worked on personal wealth estimation and developed LLM-powered tools to support credit risk assessment and investment decisions.
                 </p>
                 <p>
+                    I love what I do and part of that is knowing the landscape never stands still.
+                    Working in AI means constantly staying on top of what’s new, separating genuine breakthroughs from hype, 
+                    and embracing the next challenge.
+                    I’m always looking to expand my skill set, whether it’s diving deeper into GenAI or picking up new tools that help me 
+                    build and experiment faster.
+                    Lately, I’ve been exploring frontend development to better prototype ideas end-to-end; 
+                    this website is one of those side projects: a space to learn by doing while sharing what I care about.
+                </p>
+                <p>
                     When I’m not working, you’ll probably find me in the mountains riding my mountain bike, ski touring across backcountry trails, or
                     hiking with a heavy pack in search of new views (and taking mediocre photos of spectacular places). I’m also a voracious reader,&nbsp;
                     <a
