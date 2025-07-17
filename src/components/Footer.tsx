@@ -1,17 +1,16 @@
 import React from "react";
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
-import '../assets/styles/Footer.scss'
+import '../assets/styles/Footer.scss';
+import {REACT_APP_GITHUB_URL, REACT_APP_LINKEDIN_URL} from "../config";
 
 function Footer() {
-  const github_url = process.env.REACT_APP_GITHUB_URL
-  const linkedin_url = process.env.REACT_APP_LINKEDIN_URL
 
   return (
     <footer>
       <div>
-        <a href={github_url} target="_blank" rel="noreferrer"><GitHubIcon/></a>
-        <a href={linkedin_url} target="_blank" rel="noreferrer"><LinkedInIcon/></a>
+        <a href={REACT_APP_GITHUB_URL} target="_blank" rel="noreferrer"><GitHubIcon/></a>
+        <a href={REACT_APP_LINKEDIN_URL} target="_blank" rel="noreferrer"><LinkedInIcon/></a>
       </div>
       <p>A portfolio designed & built by <a href="https://github.com/yujisatojr/react-portfolio-template" target="_blank" rel="noreferrer">Yuji Sato</a> with 💜</p>
     </footer>

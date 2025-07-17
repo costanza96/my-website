@@ -2,10 +2,9 @@ import '../assets/styles/Contact.scss';
 import Button from '@mui/material/Button';
 import SendIcon from '@mui/icons-material/Send';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import {REACT_APP_EMAIL, REACT_APP_LINKEDIN_URL} from "../config";
 
 function Contact() {
-  const email = process.env.REACT_APP_EMAIL
-  const linkedin_url = process.env.REACT_APP_LINKEDIN_URL
 
   return (
     <div id="contact">
@@ -17,7 +16,7 @@ function Contact() {
           <div className="contact-buttons">
             <Button
               endIcon={<SendIcon />}
-              href={`mailto:${email}`}
+              href={`mailto:${REACT_APP_EMAIL}`}
             >
               Drop me an email
             </Button>
@@ -25,7 +24,7 @@ function Contact() {
             <Button
               component="a"
               endIcon={<LinkedInIcon />}
-              href={linkedin_url}
+              href={REACT_APP_LINKEDIN_URL}
               target="_blank"
               rel="noopener noreferrer"
             >
