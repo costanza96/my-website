@@ -18,6 +18,14 @@ import Toolbar from '@mui/material/Toolbar';
 import DownloadIcon from '@mui/icons-material/Download';
 import '../assets/styles/Navigation.scss';
 
+export {};
+
+declare global {
+  interface Window {
+    plausible: (eventName: string, options?: { props?: Record<string, string> }) => void;
+  }
+}
+
 const drawerWidth = 240;
 const navItems = [['About', 'about'], ['Skills', 'expertise'], ['Experience', 'history'], ['Contact', 'contact'], ['Resume', 'resume']]; //['Projects', 'projects'],
 
@@ -64,14 +72,24 @@ function Navigation({ parentToChild, modeChange }: any) {
   };
 
   const handleResumeDownload = () => {
-    const pdfUrl = '/Resume.pdf';
-    const link = document.createElement('a');
-    link.href = pdfUrl;
-    link.download = 'resume.pdf';
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
-  };
+  // Track device type
+  const isMobile = window.innerWidth < 768;
+  const deviceType = isMobile ? 'mobile' : 'desktop';
+  // Send event to Plausible (if loaded)
+  if (window.plausible) {
+    window.plausible('Resume Download', {
+      props: { device: deviceType }
+    });
+  }
+  // Trigger download
+  const pdfUrl = '/Resume.pdf';
+  const link = document.createElement('a');
+  link.href = pdfUrl;
+  link.download = 'resume.pdf';
+  document.body.appendChild(link);
+  link.click();
+  document.body.removeChild(link);
+};
 
   const drawer = (
     <Box className="navigation-bar-responsive" onClick={handleDrawerToggle} sx={{ textAlign: 'center' }}>
