@@ -12,7 +12,7 @@ function Contact() {
         <div className="contact_wrapper">
           <h1>Contact Me</h1>
           <p>I'm always looking for opportunities to chanllenge my self and learn new things. <br/>
-            Do not esitate to contact me!</p>
+            Do not hesitate to contact me!</p>
           <div className="contact-buttons">
             <Button
               endIcon={<SendIcon />}
